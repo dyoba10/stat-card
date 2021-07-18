@@ -6,9 +6,7 @@ body {
     padding: 0;
 }
 
-@media screen and (max-width: 767px) {
-    
-}
+
 
 .card {
     background-color: hsl(244, 38%, 16%);
@@ -48,7 +46,7 @@ body {
     flex-direction: row;
     color: hsla(0, 0%, 100%, 0.6);
     padding-top: 35px;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
     height: auto;
     
 }
@@ -57,12 +55,19 @@ body {
     margin-right: 70px;
 }
 
-.card .container .col-2 h2{
+.card .container .col-2 .stat-num{
     color: white;
-    font-weight: bold;
+    font-family: 'Inter';
+    font-weight: bolder;
+    font-size: 23px;
+    margin-bottom: 5px;
 }
 
-.card .header-img {
+.card .container .col-2 .stat{
+    font-family: 'Lexend Deca';
+}
+
+/* .card .header-img {
     background-image: url("../images/image-header-desktop.jpg");
     position: relative;
     width: 100%;
@@ -75,7 +80,73 @@ body {
     top: 0; bottom: 0;
     background: hsl(277, 64%, 61%);
     opacity: 0.4;
-}
+} */
 #deskripsi {
     color: hsla(0, 0%, 100%, 0.6);
+    font-family: 'Lexend Deca';
+}
+
+.card .hero {
+    background: hsl(277, 64%, 61%);
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    margin:-21px;
+    filter: contrast(1.5);
+}
+
+img {
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 900px) {
+    .card{
+
+        flex-direction: column-reverse;
+    }
+    .card .container {
+        padding: 0px;
+        margin: 0em;
+        width: auto;
+    }
+    .card .container .col-1 {
+        width: auto;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .card .container .col {
+        flex-direction: column;
+        padding-top: 15px;
+        padding-bottom: 35px;
+        height: auto;
+        text-align: center;
+    }
+    .card .container .col-2 {
+        margin-right: 0px;
+        margin-bottom: 20px;
+        font-size: 1em;
+    }
+    .card .container .col-2 .stat-num{
+        font-size: 1.2em;
+    }
+    .card .container .col-2 .stat{
+        font-size: 0.8em;
+    }
+    .card .hero {
+        margin:0px;
+        padding: 0px;   
+    }
+    img {
+        width: 100%;
+    }
+
+    .card .container h1{
+        font-size: 1.4em;
+    }
+
+    #deskripsi {
+        font-size :0.8em;
+    }
 }
